@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đăng Ký Nhận Tin | Cao Hữu Phúc</title>
+<meta name="description" content="Trang đăng ký nhận thông tin - Cao Hữu Phúc, CNWEB_2026.1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f3f5f4;
+    --surface:#ffffff;
+    --border:#e2e6e4;
+    --ink:#16211d;
+    --muted:#5c6a64;
+    --accent:#2f6f4f;
+    --accent-soft:#e6f0ea;
+    --live:#2f9e5c;
+    --font-head:'Space Grotesk', system-ui, sans-serif;
+    --font-body:'IBM Plex Mono', ui-monospace, monospace;
+  }
+  *{box-sizing:border-box;}
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:var(--font-body); line-height:1.6; }
+  .wrap{ max-width:760px; margin:0 auto; padding:56px 24px 60px; }
+
+  .avatar{ width:84px;height:84px;border-radius:18px; object-fit:cover; border:1px solid var(--border); background:var(--surface); display:block; margin-bottom:22px; }
+  h1{ font-family:var(--font-head); font-size:clamp(2rem,5vw,2.6rem); font-weight:700; margin:0 0 6px; letter-spacing:-0.01em; }
+  .role{ font-family:var(--font-head); font-size:1.05rem; color:var(--muted); margin:0 0 20px; }
+  .badges{ display:flex; flex-wrap:wrap; gap:10px; margin-bottom:28px; }
+  .badge{ font-size:12.5px; padding:6px 12px; border:1px solid var(--border); border-radius:999px; background:var(--surface); color:var(--muted); }
+
+  .site-nav{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:36px; }
+  .site-nav a{ font-family:var(--font-head); font-weight:600; font-size:13px; padding:8px 14px; border-radius:8px; text-decoration:none; color:var(--muted); border:1px solid transparent; }
+  .site-nav a.active{ background:var(--accent-soft); color:var(--accent); }
+  .site-nav a:hover{ color:var(--ink); }
+
+  h2{ font-family:var(--font-head); font-size:1.4rem; font-weight:700; margin:0 0 10px; }
+  .intro{ color:var(--muted); font-size:14px; margin:0 0 32px; }
+  .required-note{ color:var(--accent); }
+
+  fieldset{ border:1px solid var(--border); border-radius:14px; padding:22px 22px 26px; margin:0 0 24px; background:var(--surface); }
+  legend{ font-family:var(--font-head); font-weight:700; font-size:1.02rem; padding:0 8px; }
+
+  .field{ margin-bottom:18px; }
+  .field:last-child{ margin-bottom:0; }
+  label{ display:block; font-family:var(--font-head); font-weight:600; font-size:13px; color:var(--muted); margin-bottom:6px; }
+
+  input[type="text"], input[type="email"], input[type="password"], input[type="tel"],
+  input[type="date"], input[type="number"], select, textarea{
+    width:100%; padding:10px 12px; border:1px solid var(--border); border-radius:8px;
+    font-family:var(--font-body); font-size:14px; background:#fff; color:var(--ink);
+  }
+  input:focus, select:focus, textarea:focus{ outline:2px solid var(--accent); outline-offset:1px; }
+  textarea{ resize:vertical; min-height:90px; }
+  small.hint{ display:block; margin-top:5px; font-size:12px; color:var(--muted); }
+
+  .radio-row, .checkbox-row{ display:flex; gap:20px; flex-wrap:wrap; font-size:13.5px; }
+  .radio-row label, .checkbox-row label{ display:flex; align-items:center; gap:6px; font-weight:400; color:var(--ink); margin:0; }
+
+  .agree-line{ display:flex; align-items:flex-start; gap:8px; font-size:13px; margin-top:20px; }
+  .agree-line label{ font-weight:400; color:var(--ink); margin:0; }
+
+  .actions{ display:flex; gap:12px; margin-top:8px; }
+  button.btn{ font-family:var(--font-head); font-weight:600; font-size:14px; padding:11px 22px; border-radius:10px; border:1px solid var(--border); cursor:pointer; }
+  button.btn.solid{ background:var(--ink); color:#fff; border-color:var(--ink); }
+  button.btn.ghost{ background:var(--surface); color:var(--ink); }
+
+  footer{ margin-top:56px; padding-top:22px; border-top:1px solid var(--border); font-size:12px; color:var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <img class="avatar" src="https://github.com/Phuclmao.png" alt="Cao Hữu Phúc Avatar">
+  <h1>Cao Hữu Phúc</h1>
+  <p class="role">Kỹ Thuật Máy Tính 02 - K68</p>
+
+  <div class="badges">
+    <span class="badge">huuphuc.is-a.dev</span>
+    <span class="badge">@Phuclmao</span>
+    <span class="badge">CNWEB_2026.1</span>
+  </div>
+
+  <nav class="site-nav">
+    <a href="index.html">Trang chủ</a>
+    <a href="register.html" class="active">Đăng ký nhận tin</a>
+    <a href="media.html">Đa phương tiện</a>
+  </nav>
+
+  <h2>Đăng Ký Nhận Thông Tin</h2>
+  <p class="intro">Điền thông tin bên dưới để nhận bản tin định kỳ. Các trường có dấu <span class="required-note">*</span> là bắt buộc.</p>
+
+  <form action="#" method="post">
+
+    <fieldset>
+      <legend>Thông tin tài khoản</legend>
+
+      <div class="field">
+        <label for="fullname">Họ và tên *</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Nguyễn Văn A" required>
+      </div>
+
+      <div class="field">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" placeholder="ban@example.com" required>
+      </div>
+
+      <div class="field">
+        <label for="password">Mật khẩu * (tối thiểu 8 ký tự)</label>
+        <input type="password" id="password" name="password" minlength="8" required>
+      </div>
+
+      <div class="field">
+        <label for="phone">Số điện thoại * (10 số, bắt đầu bằng 0)</label>
+        <input type="tel" id="phone" name="phone" pattern="0[0-9]{9}" placeholder="0912345678" required>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Thông tin cá nhân</legend>
+
+      <div class="field">
+        <label for="dob">Ngày sinh *</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+
+      <div class="field">
+        <label for="age">Độ tuổi *</label>
+        <input type="number" id="age" name="age" min="1" max="120" required>
+      </div>
+
+      <div class="field">
+        <label>Giới tính *</label>
+        <div class="radio-row">
+          <label><input type="radio" name="gender" value="nam" required> Nam</label>
+          <label><input type="radio" name="gender" value="nu"> Nữ</label>
+          <label><input type="radio" name="gender" value="khac"> Khác</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Tuỳ chọn nhận tin</legend>
+
+      <div class="field">
+        <label>Chủ đề quan tâm</label>
+        <div class="checkbox-row">
+          <label><input type="checkbox" name="topics" value="tintuc"> Tin tức</label>
+          <label><input type="checkbox" name="topics" value="blog"> Blog</label>
+          <label><input type="checkbox" name="topics" value="sukien"> Sự kiện</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="region">Khu vực</label>
+        <select id="region" name="region">
+          <option value="">-- Chọn khu vực --</option>
+          <option value="hanoi">Hà Nội</option>
+          <option value="hcm">TP. Hồ Chí Minh</option>
+          <option value="danang">Đà Nẵng</option>
+          <option value="khac">Khác</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="message">Lời nhắn</label>
+        <textarea id="message" name="message" placeholder="Bạn muốn nhận nội dung gì?"></textarea>
+      </div>
+
+      <div class="agree-line">
+        <input type="checkbox" id="agree" name="agree" required>
+        <label for="agree">Tôi đồng ý với điều khoản sử dụng *</label>
+      </div>
+    </fieldset>
+
+    <div class="actions">
+      <button type="submit" class="btn solid">Đăng ký</button>
+      <button type="reset" class="btn ghost">Nhập lại</button>
+    </div>
+
+  </form>
+
+  <footer>
+    © 2026 Cao Hữu Phúc. Đã đăng ký bản quyền cho bài tập môn Công nghệ Web &amp; Dịch vụ Trực tuyến.
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cao Hữu Phúc | CNWEB_2026.1 Portfolio</title>
+<meta name="description" content="Trang cá nhân & Hồ sơ môn học Công nghệ Web và Dịch vụ Trực tuyến - Cao Hữu Phúc">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f3f5f4;
+    --surface:#ffffff;
+    --border:#e2e6e4;
+    --ink:#16211d;
+    --muted:#5c6a64;
+    --accent:#2f6f4f;
+    --accent-soft:#e6f0ea;
+    --live:#2f9e5c;
+    --font-head:'Space Grotesk', system-ui, sans-serif;
+    --font-body:'IBM Plex Mono', ui-monospace, monospace;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--font-body);
+    line-height:1.6;
+  }
+  .wrap{ max-width:760px; margin:0 auto; padding:56px 24px 60px; }
+
+  /* Header */
+  .avatar{
+    width:84px;height:84px;border-radius:18px;
+    object-fit:cover;
+    border:1px solid var(--border);
+    background:var(--surface);
+    display:block;
+    margin-bottom:22px;
+  }
+  h1{
+    font-family:var(--font-head);
+    font-size:clamp(2rem,5vw,2.6rem);
+    font-weight:700;
+    margin:0 0 6px;
+    letter-spacing:-0.01em;
+  }
+  .role{
+    font-family:var(--font-head);
+    font-size:1.05rem;
+    color:var(--muted);
+    margin:0 0 20px;
+  }
+  .badges{
+    display:flex; flex-wrap:wrap; gap:10px;
+    margin-bottom:28px;
+  }
+  .badge{
+    font-size:12.5px;
+    padding:6px 12px;
+    border:1px solid var(--border);
+    border-radius:999px;
+    background:var(--surface);
+    color:var(--muted);
+  }
+
+  .site-nav{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:20px; }
+  .site-nav a{
+    font-family:var(--font-head); font-weight:600; font-size:13px;
+    padding:8px 14px; border-radius:8px; text-decoration:none;
+    color:var(--muted); border:1px solid transparent;
+  }
+  .site-nav a.active{ background:var(--accent-soft); color:var(--accent); }
+  .site-nav a:hover{ color:var(--ink); }
+
+  .cta-row{ display:flex; gap:12px; flex-wrap:wrap; margin-bottom:48px; }
+  .btn{
+    font-family:var(--font-head);
+    font-weight:600;
+    font-size:14px;
+    text-decoration:none;
+    padding:11px 20px;
+    border-radius:10px;
+    border:1px solid var(--border);
+    color:var(--ink);
+    background:var(--surface);
+  }
+  .btn.solid{ background:var(--ink); color:#fff; border-color:var(--ink); }
+
+  /* Section */
+  h2{
+    font-family:var(--font-head);
+    font-size:1.15rem;
+    font-weight:700;
+    margin:0 0 16px;
+  }
+  section{ margin-bottom:44px; }
+  .card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:20px 22px;
+  }
+  .kv-row{
+    display:flex; justify-content:space-between; gap:16px;
+    padding:11px 0;
+    border-top:1px solid var(--border);
+    font-size:13.5px;
+  }
+  .kv-row:first-child{ border-top:none; }
+  .kv-row dt{ color:var(--muted); }
+  .kv-row dd{ margin:0; text-align:right; }
+  .status-dot{ color:var(--live); }
+
+  /* Tech stack */
+  .tags{ display:flex; flex-wrap:wrap; gap:10px; }
+  .tag{
+    font-size:13px;
+    padding:9px 14px;
+    border-radius:10px;
+    background:var(--accent-soft);
+    color:var(--accent);
+    border:1px solid transparent;
+  }
+
+  /* Roadmap */
+  .roadmap{ list-style:none; margin:0; padding:0; }
+  .roadmap li{
+    display:flex; gap:16px;
+    padding:18px 0;
+    border-top:1px solid var(--border);
+  }
+  .roadmap li:first-child{ border-top:none; }
+  .num{
+    font-family:var(--font-head);
+    font-weight:700;
+    font-size:14px;
+    width:30px;height:30px;flex-shrink:0;
+    border-radius:8px;
+    background:var(--accent-soft);
+    color:var(--accent);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .roadmap h3{
+    font-family:var(--font-head);
+    font-size:15px; margin:0 0 4px;
+  }
+  .roadmap p{ margin:0; font-size:13px; color:var(--muted); }
+
+  footer{
+    margin-top:56px;
+    padding-top:22px;
+    border-top:1px solid var(--border);
+    font-size:12px;
+    color:var(--muted);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <img class="avatar" src="https://github.com/Phuclmao.png" alt="Cao Hữu Phúc Avatar">
+
+    <h1>Cao Hữu Phúc</h1>
+    <p class="role">Kỹ Thuật Máy Tính 02 - K68</p>
+
+    <div class="badges">
+      <span class="badge">huuphuc.is-a.dev</span>
+      <span class="badge">@Phuclmao</span>
+      <span class="badge">CNWEB_2026.1</span>
+    </div>
+
+    <nav class="site-nav" aria-label="Điều hướng chính">
+      <a href="index_new.html" class="active">Trang chủ</a>
+      <a href="register.html">Đăng ký nhận tin</a>
+      <a href="media.html">Đa phương tiện</a>
+    </nav>
+
+    <div class="cta-row">
+      <a class="btn solid" href="https://github.com/Phuclmao/CNWEB_2026.1">Xem Repo GitHub</a>
+      <a class="btn" href="https://huuphuc.is-a.dev">Truy cập Website</a>
+    </div>
+  </header>
+
+  <main>
+    <section aria-labelledby="course-info-heading">
+      <h2 id="course-info-heading">Thông Tin Môn Học</h2>
+      <div class="card">
+        <dl style="margin:0;">
+          <div class="kv-row"><dt>Môn học</dt><dd>Công nghệ Web &amp; DVTT</dd></div>
+          <div class="kv-row"><dt>Mã học phần</dt><dd>CNWEB_2026.1</dd></div>
+          <div class="kv-row"><dt>Kỳ học</dt><dd>Học kỳ I (2026)</dd></div>
+          <div class="kv-row"><dt>Mục tiêu</dt><dd>Fullstack Web Development</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section aria-labelledby="infra-heading">
+      <h2 id="infra-heading">Hạ Tầng Web</h2>
+      <div class="card">
+        <dl style="margin:0;">
+          <div class="kv-row"><dt>Tên miền (Domain)</dt><dd>huuphuc.is-a.dev</dd></div>
+          <div class="kv-row"><dt>Quản lý Tên miền</dt><dd>GitHub (is-a.dev)</dd></div>
+          <div class="kv-row"><dt>Version Control</dt><dd>Git / GitHub</dd></div>
+          <div class="kv-row"><dt>Trạng thái</dt><dd class="status-dot">🟢 Hoạt động</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section aria-labelledby="techstack-heading">
+      <h2 id="techstack-heading">Tech Stack Học Tập</h2>
+      <ul class="tags" style="list-style:none; margin:0; padding:0;">
+        <li class="tag">HTML5</li>
+        <li class="tag">CSS3 / Responsive</li>
+        <li class="tag">JavaScript</li>
+        <li class="tag">Python / FastAPI</li>
+        <li class="tag">Git &amp; GitHub</li>
+        <li class="tag">Docker</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="roadmap-heading">
+      <h2 id="roadmap-heading">Lộ Trình Bài Tập (Roadmap)</h2>
+      <ol class="roadmap">
+        <li>
+          <span class="num">1</span>
+          <div>
+            <h3>Khởi tạo Repo &amp; Domain</h3>
+            <p>Đã hoàn thành khởi tạo Git &amp; đăng ký .id.vn</p>
+          </div>
+        </li>
+        <li>
+          <span class="num">2</span>
+          <div>
+            <h3>Thiết kế Giao diện Frontend</h3>
+            <p>Xây dựng trang giao diện cá nhân chuẩn Responsive</p>
+          </div>
+        </li>
+        <li>
+          <span class="num">3</span>
+          <div>
+            <h3>Phát triển Backend &amp; API</h3>
+            <p>Xây dựng Web Server, Database &amp; RESTful APIs</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Cao Hữu Phúc. Đã đăng ký bản quyền cho bài tập môn Công nghệ Web &amp; Dịch vụ Trực tuyến.</p>
+  </footer>
+
+</div>
+</body>
+</html>
